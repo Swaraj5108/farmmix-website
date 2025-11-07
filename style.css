@@ -1,0 +1,343 @@
+/* --- Basic Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color, #f9f9f9);
+    color: var(--text-color, #333);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- Header --- */
+header {
+    background: #e8f5e9;
+    /* soft green for contrast with logo */
+    color: #2c6e49;
+    padding: 0.8rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c6e49;
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: left;
+}
+
+nav a {
+    color: #2c6e49;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #388e3c;
+}
+
+/* --- Mobile Menu --- */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #2c6e49;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #e8f5e9;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /*Edit - 1: Readable text in Dark mode on mobile */
+    .dark nav ul {
+        background: #163c2c;
+    }
+
+    .dark nav a {
+        color: #f2f2f2;
+    }
+
+    .dark nav a:hover {
+        color: #90ee90;
+    }
+}
+
+
+/* --- Hero Section --- */
+.hero {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(to right, #2c6e49, #3a7d5a);
+    color: white;
+    animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Section --- */
+.section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+/* --- Features Section --- */
+#features {
+    background: var(--features-bg, #f0fff4);
+    transition: background-color 0.3s;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 2rem auto 0;
+}
+
+.feature-card {
+    background: var(--card-bg, #ffffff);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card span {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Products --- */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 2rem auto;
+}
+
+.product-card {
+    background: var(--card-bg, #ffffff);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+/* Create a wrapper so image and text don’t overlap */
+.product-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.product-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease, object-fit 0.5s ease;
+    display: block;
+    z-index: 1;
+    position: relative;
+}
+
+/* Hover Effects */
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background: #e8f5e9;
+    /* light green background */
+}
+
+/* Zoomed image with full view and green backdrop */
+.product-card:hover .product-image {
+    background: #dcedc8;
+    /* softer green */
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.2);
+    object-fit: contain;
+}
+
+/* Ensure text always stays above background and not behind image */
+.product-card h3,
+.product-card p {
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    margin-top: 0.8rem;
+}
+
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card h3 {
+    color: #2c6e49;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+/* --- Footer --- */
+footer {
+    background: #2c6e49;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ffd166;
+}
+
+/* --- Dark Mode --- */
+.dark {
+    --bg-color: #1c1c1c;
+    --text-color: #f2f2f2;
+    --features-bg: #163c2c;
+    /* dark green instead of black */
+    --card-bg: #2a3c2a;
+}
+
+.dark header {
+    background: #244c37;
+    color: #f2f2f2;
+}
+
+.dark .logo {
+    color: #f2f2f2;
+}
+
+.dark nav a {
+    color: #f2f2f2;
+}
+
+.dark nav a.active {
+    color: #90ee90;
+}
+
+.toggle-theme {
+    cursor: pointer;
+    font-size: 1.2rem;
+    background: white;
+    color: #2c6e49;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+}
+
+/* --- Back to Top Button --- */
+#backToTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #2c6e49;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    transition: background 0.3s;
+    z-index: 999;
+}
+
+#backToTop:hover {
+    background: #3a7d5a;
+}
