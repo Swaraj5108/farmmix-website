@@ -41,7 +41,8 @@ header {
     object-fit: cover;
 }
 
-.logo, .logo a {
+.logo,
+.logo a {
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
@@ -238,7 +239,7 @@ nav a.active {
     position: relative;
     z-index: 2;
     background: transparent;
-    margin-top: 0.8rem;
+    margin: 0.8rem 0.5rem 1.25rem 0.5rem;
 }
 
 .product-card img {
