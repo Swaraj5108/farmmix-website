@@ -1,0 +1,107 @@
+/* -------------------------------
+   Founder Page Styles
+---------------------------------*/
+
+/* Hero section (same gradient as home) */
+.founder-hero {
+    background: linear-gradient(to right, #2c6e49, #3a7d5a);
+    color: white;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.founder-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.founder-hero p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Founder Section */
+.founder-section {
+    padding: 4rem 2rem;
+}
+
+.founder-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    text-align: left;
+}
+
+/* Founder Image */
+.founder-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Founder Info */
+.founder-info h2 {
+    color: #2c6e49;
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.founder-info h4 {
+    color: gray;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.founder-info p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Developer credit in footer */
+.developer-credit {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+}
+
+/* -------------------------------
+   🌙 Dark Mode Adjustments
+---------------------------------*/
+
+.dark .founder-hero {
+    background: linear-gradient(to right, #163c2c, #1e4a35);
+    color: #e8f5e9;
+}
+
+.dark .founder-section {
+    background-color: #1c1c1c;
+    color: #f2f2f2;
+}
+
+.dark .founder-info h2 {
+    color: #90ee90;
+}
+
+.dark .founder-info h4 {
+    color: #b0b0b0;
+}
+
+.dark .founder-info p {
+    color: #e0e0e0;
+}
+
+.dark .founder-image img {
+    box-shadow: 0 0 12px rgba(144, 238, 144, 0.3);
+}
+
+.dark footer {
+    background: #244c37;
+}

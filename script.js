@@ -1,8 +1,30 @@
 // --- Mobile Menu Toggle ---
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('nav ul');
-menuToggle.addEventListener('click', () => {
+
+// Toggle menu when ☰ clicked
+menuToggle.addEventListener('click', (e) => {
+  e.stopPropagation(); // prevent click from bubbling up
   navLinks.classList.toggle('active');
+});
+
+// Close menu when any nav link is clicked
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
+});
+
+// Close menu when clicking outside of it
+document.addEventListener('click', (e) => {
+  if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+    navLinks.classList.remove('active');
+  }
+});
+
+// Close menu when scrolling
+window.addEventListener('scroll', () => {
+  navLinks.classList.remove('active');
 });
 
 // --- Auto Year ---

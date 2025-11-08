@@ -2,28 +2,20 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FarmMix Nutri Solution | Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Founder | FarmMix Nutri Solution</title>
     <link rel="shortcut icon" href="./media/Image/favicon.ico" type="image/x-icon">
 
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GT6N1QCFXF"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-GT6N1QCFXF');
-    </script>
+    <!-- Main shared site styles -->
     <link rel="stylesheet" href="style.css">
+    <!-- Page-specific styles -->
+    <link rel="stylesheet" href="about-owner.css">
 </head>
 
 <body>
     <header>
         <div class="logo-container">
-            <!-- Replace with your own green logo -->
             <a href="index.html"><img src="media/Image/FarmMix-Nutri-Solution-logo.png" alt="Logo" /></a>
             <div class="logo"><a href="index.html">FarmMix Nutri Solution</a></div>
         </div>
@@ -31,11 +23,11 @@
         <div class="menu-toggle">☰</div>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="about-owner.html">Founder</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="about-owner.html" class="active">Founder</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
                 <li>
                     <div class="theme-toggle-wrapper">
                         <button class="toggle-theme" title="Toggle dark mode">🌙</button>
@@ -46,108 +38,36 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>Sustainable Animal Nutrition</h1>
-        <!-- <p>FarmMix Nutri Solution is a sustainable agritech startup focused on providing high-value animal feed products
-            that enhance livestock productivity and health.</p> -->
+    <!-- Hero Section -->
+    <section class="hero founder-hero">
+        <h1>Meet the Founder</h1>
+        <p>The visionary mind behind FarmMix Nutri Solution.</p>
     </section>
 
-    <section id="about" class="section">
-        <h2>About Us</h2>
-        <p>FarmMix Nutri Solution is a sustainable agritech startup focused on providing sustainable high-value feed
-            solutions for livestock, pets, fish through circular intrgrated farming</p>
-    </section>
-
-    <section id="features" class="section">
-        <h2>Key Features</h2>
-        <div class="features-grid">
-            <div class="feature-card"><span>🌱</span> Sustainable, eco-friendly sourcing</div>
-            <div class="feature-card"><span>🧪</span> Scientifically tested formulations</div>
-            <div class="feature-card"><span>🐄</span> Enhances livestock growth & immunity</div>
-            <div class="feature-card"><span>🌍</span> Supports circular farming economy</div>
-            <div class="feature-card"><span>🔬</span> Backed by veterinary nutrition experts</div>
-            <div class="feature-card"><span>💡</span> Continuous innovation for farm efficiency</div>
-            <div class="feature-card"><span>♻️</span> Focus on renewable feed resources</div>
-            <div class="feature-card"><span>🌾</span> Helps maintain soil and ecosystem balance</div>
+    <!-- Founder Section -->
+    <section id="founder" class="section founder-section">
+        <div class="founder-container">
+            <div class="founder-image">
+                <img src="./media/Image/founder.jpeg" alt="Founder - Nitya Kumar Halder">
+            </div>
+            <div class="founder-info">
+                <h2>Nitya Kumar Halder</h2>
+                <h4>Founder & CEO, FarmMix Nutri Solution</h4>
+                <p>
+                    Nitya Kumar Halder, a passionate animal nutrition enthusiast and entrepreneur from West Bengal, India, founded
+                    <strong>FarmMix Nutri Solution</strong> to revolutionize sustainable livestock and aquaculture feed systems.
+                    With a focus on scientific innovation, ecological balance, and animal welfare, he aims to create a model of
+                    <strong>circular integrated farming</strong> that supports both farmers and the environment.
+                </p>
+                <p>
+                    His work bridges veterinary science, agritech innovation, and sustainability — empowering farmers to adopt
+                    smarter and greener feeding solutions for better productivity and animal health.
+                </p>
+            </div>
         </div>
     </section>
 
-    <section id="products" class="section">
-        <h2>Our Products</h2>
-        <div class="products">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="./media/Image/Starter_poultry_feed.jpeg" alt="Starter Poultry Feed">
-                </div>
-                <h3>Starter Poultry Feed</h3>
-                <p> Balanced poultry starter feed for strong immunity and rapid early growth</p>
-            </div>
-            <!-- Product 2 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="./media/Image/Finisher_poultry-feed.jpeg" alt="Finisher Poultry Feed">
-                </div>
-                <h3>Finisher Poultry Feed</h3>
-                <p>Energy-rich poultry finisher feed for optimal weight gain and superior meat quality </p>
-            </div>
-            <!-- Product 3 -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="./media/Image/Duck Feed.jpeg" alt="Duck Feed">
-                </div>
-                <h3>Duck Feed</h3>
-                <p>Nutritious and sustainable duck feed for healthier growth and higher productivity.</p>
-            </div>
-            <!-- Product 4  -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="./media/Image/Fish Feed.jpeg" alt="Fish Feed">
-                </div>
-                <h3>Fish Feed</h3>
-                <p>High-protein, eco-friendly fish feed for faster growth and improved pond health.</p>
-            </div>
-            <!-- Product 5  -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="./media/Image/cat_feed.jpeg" alt="Cat Feed">
-                </div>
-                <h3>Cat Food</h3>
-                <p>Nutritious and tasty cat food for active, healthy, and happy felines.</p>
-            </div>
-            <!-- Product 6  -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="./media/Image/Dog_feed.jpeg" alt="Dog Feed">
-                </div>
-                <h3>Dog Food</h3>
-                <p>Wholesome and protein-packed dog food for strength, vitality, and a shiny coat.</p>
-            </div>
-            <!-- Product 7  -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="./media/Image/rabbit.jpeg" alt="Rabbit Feed">
-                </div>
-                <h3>Rabbit, Parrot, Goldfish Food</h3>
-                <p>Nutritious feed blend for rabbits, parrots, and goldfish—promoting health, color, and vitality.</p>
-            </div>
-            <!-- Product 8  -->
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="./media/Image/Biofertilizer.jpeg" alt="FarmMix Biofertilizer">
-                </div>
-                <h3>FarmMix Biofertilizer</h3>
-                <p>Eco-friendly biofertilizer enriching soil health and boosting sustainable farm productivity.</p>
-            </div>
-        </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <h2>Contact Us</h2>
-        <p>Email: nityakumarhalder2001@gmail.com | Phone: +91 93824 41618</p>
-    </section>
-
+    <!-- Footer -->
     <footer>
         <p>&copy; <span id="year"></span> FarmMix Nutri Solution. All rights reserved.</p>
         <p class="developer-credit">Website developed by <strong><a href="https://www.instagram.com/swaraj_5108?igsh=MXZtbm4zMTZvMGgwZQ==">Swaraj Mandal</a></strong>.</p>
@@ -212,5 +132,4 @@
 
     <script src="script.js"></script>
 </body>
-
 </html>
