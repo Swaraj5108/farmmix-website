@@ -34,17 +34,22 @@ document.getElementById('year').textContent = new Date().getFullYear();
 const themeBtn = document.querySelector('.toggle-theme');
 const themeLabel = document.querySelector('.theme-label');
 
-// Set initial label based on current mode
-themeLabel.textContent = document.body.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
-
-themeBtn.addEventListener('click', () => {
+// Function to toggle theme
+function toggleTheme() {
   document.body.classList.toggle('dark');
   const isDark = document.body.classList.contains('dark');
 
-  // Change icon and label dynamically
+  // Update icon and label
   themeBtn.textContent = isDark ? '☀️' : '🌙';
   themeLabel.textContent = isDark ? 'Light Mode' : 'Dark Mode';
-});
+}
+
+// Initialize label based on current mode
+themeLabel.textContent = document.body.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
+
+// Event listeners for both icon and label
+themeBtn.addEventListener('click', toggleTheme);
+themeLabel.addEventListener('click', toggleTheme);
 
 // --- Back to Top Button ---
 const backToTop = document.getElementById('backToTop');

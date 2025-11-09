@@ -326,6 +326,18 @@ footer p strong a {
     height: 32px;
 }
 
+.theme-label {
+    cursor: pointer;
+    margin-left: 0.4rem;
+    user-select: none;
+    transition: color 0.3s;
+}
+
+.theme-label:hover {
+    color: #388e3c;
+}
+
+
 /* --- Back to Top Button --- */
 #backToTop {
     position: fixed;
