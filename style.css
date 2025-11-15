@@ -7,7 +7,12 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+
+    font-family: "Baloo Bhai 2", "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
     background-color: var(--bg-color, #f9f9f9);
     color: var(--text-color, #333);
     transition: background-color 0.3s, color 0.3s;
@@ -268,6 +273,7 @@ footer {
     text-align: center;
     padding: 2rem 1rem;
 }
+
 footer p strong a {
     text-decoration: none;
     color: white;
@@ -289,7 +295,9 @@ footer p strong a {
     color: #ffd166;
 }
 
-/* --- Dark Mode --- */
+/* ----------------------------------------
+            🌙 Dark Mode Adjustmets 
+------------------------------------------- */
 .dark {
     --bg-color: #1c1c1c;
     --text-color: #f2f2f2;
